@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TPO NIT Jalandhar</title>
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+     <style>
+         .main-div, .loggedin-div {
+  width: 270px;
+  margin: 0px auto;
+  margin-top: 110px;
+  padding: 20px;
+  display: none;
+}
+
+.main-div input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div input:focus {
+  border: 1px solid #777;
+}
+
+.main-div button, .loggedin-div button {
+  background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div button:hover, .loggedin-div button:hover {
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+  cursor: pointer;
+}
+
+         
+         .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    margin-top: 20px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+        .flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+        .mySlides {display:none;}
+        .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+        .wrapper{width:100%;
+border-radius:8px;
+border:1px solid green;
+padding:10px;
+background:white;
+margin-top:0px;
+margin-left:0px;
+float:left;}
+.wrapper h2{text-transform:uppercase;color:#e74c3c}
+.wrapper p{color:#222;font-weight:bold}
+.wrapper input[type=text],
+.wrapper input[type=email],
+textarea{width: 100%;margin-bottom:5px;padding:1px;}
+.wrapper a{text-decoration: none;
+background: #2ecc71;
+color:#fff;
+display: block;
+padding:10px 15px;
+text-align:center;
+font-size:15px;
+}
+         
+         div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+         td, th {
+    border: 0.1px
+    solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+         #main_left{
+             margin-left:15%;
+             margin-right: :15%
+         }
+          #main_right{
+             margin-left:5%;
+             margin-right: :5%
+         }
+</style>
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html"><font size="4"> Training & Placement Cell</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Departments</a></li>
+          <li><a href="index.html">Contacts</a></li>
+            <li><a href="index.html">About Us</a></li>
+          <li class="btn-trial"><a href="">NIT Jalandhar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Navigation bar-->
+  <!--Modal box-->
+      </div>
+
+    </div>
+  </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+      </div>
+
+    </div>
+  </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--/ Modal box-->
+  <!--Banner-->
+  <!--/ Banner-->
+      <!--Feature-->
+<div class="modal fade" id="shubhamgoyal" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content no 1-->
+ <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center form-title">Shubham Goyal</h4>
+        </div>
+        <div class="modal-body padtrbl">
+          
+        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+        </br>
+      <img src="shubham.jpg" alt="Avatar" style="width:200px;height:200px;">
+      </br></br>
+            <b>Btech Student at</b> <span style="color: green"><b>NIT Jalandhar</b></span>  <b>Computer & Science Engg.(2016-20)</b>
+    </div>
+
+        <div class="flip-card-back">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+          <div class="login-box-body">
+           
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+<div class="modal fade" id="kishore" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content no 1-->
+ <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center form-title">Shubham Goyal</h4>
+        </div>
+        <div class="modal-body padtrbl">
+          
+        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+        </br>
+      <img src="shubham.jpg" alt="Avatar" style="width:200px;height:200px;">
+      </br></br>
+            <b>Btech Student at</b> <span style="color: green"><b>NIT Jalandhar</b></span>  <b>Computer & Science Engg.(2016-20)</b>
+    </div>
+
+        <div class="flip-card-back">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+          <div class="login-box-body">
+           
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+<div class="modal fade" id="shyam" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content no 1-->
+ <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center form-title">Shubham Goyal</h4>
+        </div>
+        <div class="modal-body padtrbl">
+          
+        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+        </br>
+      <img src="shubham.jpg" alt="Avatar" style="width:200px;height:200px;">
+      </br></br>
+            <b>Btech Student at</b> <span style="color: green"><b>NIT Jalandhar</b></span>  <b>Computer & Science Engg.(2016-20)</b>
+    </div>
+
+        <div class="flip-card-back">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+          <div class="login-box-body">
+           
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+<div class="modal fade" id="yash" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content no 1-->
+ <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center form-title">Shubham Goyal</h4>
+        </div>
+        <div class="modal-body padtrbl">
+          
+        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+        </br>
+      <img src="shubham.jpg" alt="Avatar" style="width:200px;height:200px;">
+      </br></br>
+            <b>Btech Student at</b> <span style="color: green"><b>NIT Jalandhar</b></span>  <b>Computer & Science Engg.(2016-20)</b>
+    </div>
+
+        <div class="flip-card-back">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+          <div class="login-box-body">
+           
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+<div id="login_div" class="main-div">
+    <center><span style="color:coral;"><h2><b>Faculty Login</b></h2></center>
+	<div align="center"><font color="black">
+		<select name ="dept4" id="dept4" class="required-entry" required style="height:40px;width:200px;height:40px;background-color:coral;border-color:green;border-radius:8px;">
+	    <option value="" disabled selected>Choose Department</option>
+		    <option value="BT">Bio-Technology</option>
+			<option value="CHE">Chemical Enginneering</option>
+			<option value="CH">Chemistry</option>
+			<option value="CI">Civil Engineering</option>
+            <option value="CSE">Computer Science & Engg.</option>
+			<option value="EE">Electrical Engineering</option>
+			<option value="ECE">Electronics & Comm. Engineering</option>
+			<option value="HM">Humanities & Management</option>
+			<option value="IPE">Industrial & Production Engg.</option>
+			<option value="ICE">Instrumentation & Control Engg.</option>
+			<option value="IT">Information Technology</option>
+			<option value="MA">Mathematics</option>
+			<option value="ME">Mechanical Engineering</option>
+			<option value="MI">Mining Technology</option>			
+			<option value="PHY">Physics</option>
+			<option value="TT">Textile Technology</option>
+        </select></div></br>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+        <center><a  href="javascript:login(dept4.value,email_field.value,password_field.value)" /><font size="3.5"><b> <span style="color: green">Login</b></span></font></a></center>
+    </br></br></br>
+  </div>
+<section id="attendance" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <div class="scrollmenu">
+  <a href="#faculty.html"><b> <span style="color: coral">Faculty Portal </b></span></font></a>
+  <a href="#feature2">Company Registration</a>
+  <a href="#feature3">Check Attendence</a>
+  <a href="#" data-target="#fbpage" data-toggle="modal">FB Page</a> 
+  <a  href="javascript:statistics()" />Statistics</a>
+          <a  href="javascript:logout()" />Logout</a>
+    
+  <a href="#" data-target="#message" data-toggle="modal">Message</a> 
+            </div></br>
+            <div align="center"><font color="black">
+		<select name ="dept2" id="dept2" class="required-entry" required style="height:40px;width:200px;height:40px;background-color:coral;border-color:green;border-radius:8px;">
+	    <option value="" disabled selected>Choose Department</option>
+		    <option value="BT">Bio-Technology</option>
+			<option value="CHE">Chemical Enginneering</option>
+			<option value="CH">Chemistry</option>
+			<option value="CI">Civil Engineering</option>
+            <option value="CSE">Computer Science & Engg.</option>
+			<option value="EE">Electrical Engineering</option>
+			<option value="ECE">Electronics & Comm. Engineering</option>
+			<option value="HM">Humanities & Management</option>
+			<option value="IPE">Industrial & Production Engg.</option>
+			<option value="ICE">Instrumentation & Control Engg.</option>
+			<option value="IT">Information Technology</option>
+			<option value="MA">Mathematics</option>
+			<option value="ME">Mechanical Engineering</option>
+			<option value="MI">Mining Technology</option>			
+			<option value="PHY">Physics</option>
+			<option value="TT">Textile Technology</option>
+        </select>
+		<select name ="year2" id="year2" class="required-entry" required style="height:40px;width:200px;height:40px;background-color:coral;border-color:green;border-radius:8px;" align="right">
+	    <option value="" disabled selected>Choose Batch</option>
+		    <option value="2016-2020">2016-2020</option>
+			<option value="2017-2021">2017-2021</option>
+			<option value="2018-2022">2018-2022</option>
+			<option value="2019-2023">2019-2023</option>
+			<option value="2020-2024">2020-2024</option>
+			<option value="2021-2025">2021-2025</option>
+			<option value="2022-2026">2022-2026</option>
+			<option value="2023-2027">2023-2027</option>
+			<option value="2024-2028">2024-2028</option>
+			<option value="2025-2029">2025-2029</option>
+			<option value="2025-2029">2026-2030</option>
+        </select></font>
+        </div>
+        </div>
+      
+          <div class="col-md-6 col-sm-6 col-xs-12 left">
+           <div id="main_left">
+    <form></br></br>
+                  <table>
+				  <tr>
+                      <td1>
+                          <label for-" Name"><b>Roll No - </b>  </label>
+                      </td1>
+                      <td1>
+                      <input type="text" name="rn1" maxlength="8" size="10">
+                      </td1>
+                      <td1><input  type="button" value="submit"  onclick="javascript:searchdata(rn1.value,dept2.value,year2.value)" /></td1>
+                    </tr>
+                   </table>
+                  
+    <br/></br>
+                   <span style="color:coral;"><p><b>1. Personal Details</b></p>
+<table id="atte1"  style="color:green;" font size="0.5">
+                  <tr>
+                     <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>Roll No</center></b></span></label>
+                      </th>
+                      <th>
+                      <label for-" Name"><span style="color:brown;">Name</span></label>
+                      </th>
+
+                    </tr>
+</table>
+                       </br>               <span style="color:coral;"><p><b>2. Contact Details</b></p>
+<table id="atte2"  style="color:green;" font size="0.5">
+                  <tr>
+                     <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>Mobile No.</center></b></span></label>
+                      </th>
+                      <th>
+                      <label for-" Name"><span style="color:brown;"><center>Email Address</center></span></label>
+                      </th>
+
+                    </tr>
+</table>
+                           </div>
+          </div>
+
+          <div class="col-md-6 col-sm-6 col-xs-12 right">
+              <div id="main_right"></br>
+      <span style="color:coral;"><p><b>3. Attendence Details</b></p>
+   <center> <table id="attend"  style="color:black;" font size="1">
+        <tr>
+		            <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>SNo</center></b></span></label>
+                      </th>
+                     <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>Purpose</center></b></span></label>
+                      </th>
+            <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>Date</center></b></span></label>
+                      </th>
+                      <th>
+                      <label for-" Name"><span style="color:brown;">Day</span></label>
+                      </th>
+                    </tr>
+</table></center>
+</div>
+          </div>
+
+         
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--/ feature-->
+     <!--work-shop-->
+
+
+
+  <!--/ work-shop-->
+ <section id="statistics" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <div class="scrollmenu">
+  <a href="#faculty.html"><b> <span style="color: coral">Faculty Portal </b></span></font></a>
+  <a href="#feature2">Company Registration</a>
+  <a href="#feature3">Check Attendence</a>
+  <a href="#" data-target="#fbpage" data-toggle="modal">FB Page</a> 
+  <a  href="javascript:attendance()" />Check Attendance</a>
+  <a  href="javascript:logout()" />Logout</a>  
+  <a href="#" data-target="#message" data-toggle="modal">Message</a> 
+            </div></br>
+          <div align="center"><font color="black">
+		<select name ="dept3" id="dept3" class="required-entry" required style="height:40px;width:200px;height:40px;background-color:coral;border-color:green;border-radius:8px;">
+	    <option value="" disabled selected>Choose Department</option>
+		    <option value="BT">Bio-Technology</option>
+			<option value="CHE">Chemical Enginneering</option>
+			<option value="CH">Chemistry</option>
+			<option value="CI">Civil Engineering</option>
+            <option value="CSE">Computer Science & Engg.</option>
+			<option value="EE">Electrical Engineering</option>
+			<option value="ECE">Electronics & Comm. Engineering</option>
+			<option value="HM">Humanities & Management</option>
+			<option value="IPE">Industrial & Production Engg.</option>
+			<option value="ICE">Instrumentation & Control Engg.</option>
+			<option value="IT">Information Technology</option>
+			<option value="MA">Mathematics</option>
+			<option value="ME">Mechanical Engineering</option>
+			<option value="MI">Mining Technology</option>			
+			<option value="PHY">Physics</option>
+			<option value="TT">Textile Technology</option>
+        </select>
+		<select name ="year3" id="year3" class="required-entry" required style="height:40px;width:200px;height:40px;background-color:coral;border-color:green;border-radius:8px;" align="right">
+	    <option value="" disabled selected>Choose Batch</option>
+		    <option value="2016-2020">2016-2020</option>
+			<option value="2017-2021">2017-2021</option>
+			<option value="2018-2022">2018-2022</option>
+			<option value="2019-2023">2019-2023</option>
+			<option value="2020-2024">2020-2024</option>
+			<option value="2021-2025">2021-2025</option>
+			<option value="2022-2026">2022-2026</option>
+			<option value="2023-2027">2023-2027</option>
+			<option value="2024-2028">2024-2028</option>
+			<option value="2025-2029">2025-2029</option>
+			<option value="2025-2029">2026-2030</option>
+        </select></font></br><input class="button" type="button" value="Show Data"  onclick="javascript:showplacedata1(dept3.value,year3.value)" />
+        </div>
+        </div>
+      
+          <div class="col-md-6 col-sm-6 col-xs-12 left">
+           <div id="main_left">
+    </br>
+                   <span style="color:green;"><p id="summary"><b>1. Summary</b></br></p>
+                      
+           
+
+                           </div>
+          </div>
+
+          <div class="col-md-6 col-sm-6 col-xs-12 right">
+              <div></br>
+      <span style="color:green;"><p><b>2. Student's Record</b></p>
+   <center> <table id="sum1"  style="color:black;" font size="1">
+        <tr>
+                     <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>S.N.</center></b></span></label>
+                      </th>
+            <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>Roll No.</center></b></span></label>
+                      </th>
+            <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>Name</center></b></span></label>
+                      </th>
+            <th >
+                      <label for-" Name"><span style="color:brown;"><b><center>Company</center></b></span></label>
+                      </th>
+                      <th>
+                      <label for-" Name"><span style="color:brown;">Package</span></label>
+                      </th>
+
+                    </tr>
+</table></center>
+</div>
+          </div>
+
+         
+
+      </div>
+    </div>
+  </section>
+  <!--Organisations-->
+  
+  <!--/ Organisations-->
+  <!--Cta-->
+  
+  <!--/ Cta-->
+ 
+  <!--Faculity member-->
+  
+  <!--/ Faculity member-->
+  <!--Testimonial-->
+  <section id="testimonial" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+        <h3 class="white"><span style="color:coral;">Developed </span></h3>
+      <center> <p class="text-name"><span style="color:green;">By<font size="2.5"> <a href="#" data-target="#shubhamgoyal" data-toggle="modal">Shubham</a> / <a href="#" data-target="#kishore" data-toggle="modal">Kishore</a> / <a href="#" data-target="#shyam" data-toggle="modal">Shyam</a> / <a href="#" data-target="#yash" data-toggle="modal">Yash</a></</span></p></center>
+    </div>
+  </section>
+  <!--/ Testimonial-->
+  <!--Courses-->
+  
+  <!--/ Courses-->
+  <!--Pricing-->
+  
+  <!--/ Pricing-->
+  <!--Contact-->
+  
+  <!--/ Contact-->
+  <!--Footer-->
+  
+  <!--/ Footer-->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB0AXNhbkMkUmhsToQ8PJC6KNPWgFPErAk",
+    authDomain: "placement-cell-nit-jalandhar.firebaseapp.com",
+    databaseURL: "https://placement-cell-nit-jalandhar.firebaseio.com",
+    projectId: "placement-cell-nit-jalandhar",
+    storageBucket: "placement-cell-nit-jalandhar.appspot.com",
+    messagingSenderId: "438818828039"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script>
+    
+  function searchdata(rn1,dept1,year1){
+   var playersRef =firebase.database().ref(year1+"/"+dept1);
+   var sn=0;
+   playersRef.once("value").then(function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+  var key = childSnapshot.key;
+  var childData = childSnapshot.val();              
+  var RollNo = childSnapshot.val().RollNo;
+  if(RollNo==rn1){
+  var name = childSnapshot.val().Name;
+  var email = childSnapshot.val().Email;
+  var phone = childSnapshot.val().Phone;
+  $("#atte1").append("<tr><td>"+rn1+"</td><td>"+name+"</td></tr>"); 
+  $("#atte2").append('<tr><td><a class="abc" href="https://api.whatsapp.com/send?phone=91'+phone+'"><span style="color:blue;">'+phone+'</span></a></td><td> '+email+'</td></tr>');
+   childSnapshot.forEach(function(childSnapshot){
+   var key = childSnapshot.key;
+   var childData = childSnapshot.val();
+             if(key=="Attendance"){
+                 childSnapshot.forEach(function(childSnapshot){
+				 sn=sn+1;
+                 var key = childSnapshot.key;
+                 var childData = childSnapshot.val();
+                 var comp  = childSnapshot.val().CompanyName;
+                 var date  = childSnapshot.val().Date;
+				 var day  = childSnapshot.val().Day;
+				  $("#attend").append("<tr><td>"+sn+"</td><td>"+comp+"</td><td>"+date+"</td><td>"+day+"</td></tr>"); });
+                }
+				 });
+           }
+		   });
+		   });
+  }
+  function showplacedata1(dept3,year3){
+  var playersRef =firebase.database().ref(year3+"/"+dept3);
+  var sn=0;
+  var tof=0;
+  var tdof=0;
+  var tpl=0;
+  playersRef.once("value").then(function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+  sn=sn+1;
+  var key = childSnapshot.key;
+  var childData = childSnapshot.val();              
+  var RollNo = childSnapshot.val().RollNo;
+  var name = childSnapshot.val().Name;
+  var offers = childSnapshot.val().offers;
+  var com="";
+  var pac="";
+  if(childSnapshot.val().Placed=="Yes"){
+   tpl=tpl+1;
+   tof=tof+offers;
+   if(offers>1)
+       tdof=tdof+(offers-1);
+   childSnapshot.forEach(function(childSnapshot){
+   var key = childSnapshot.key;
+   var childData = childSnapshot.val();
+             if(key=="PlacementD"){
+                 childSnapshot.forEach(function(childSnapshot){
+                 var key = childSnapshot.key;
+                 var childData = childSnapshot.val();
+                 var comp  = childSnapshot.val().CompanyName;
+                 var pak  = childSnapshot.val().Package;
+                 console.log(comp);
+                 console.log(pak);
+                 com=com+" | "+comp;
+                 pac=pac+" | "+pak;});}
+           });
+		   }$("#sum1").append("<tr><td>"+sn+"</td><td>"+RollNo+"</td><td>"+name+"</td><td>"+com+"</td><td>"+pac+"</td></tr>"); });
+		    $("#summary").append('</br><span style="color: #993300;"><b>Total Students : </b></span>'+sn+'</br><b><span style="color: #993300;">Total Offers: </b></span> '+tof+'</br><span style="color: #993300;"><b>Multiple Offers: </b></span> '+tdof+'</br><span style="color: #993300;"><b>Total Placed: </b></span>'+tpl+'</br></br>');
+
+		   });
+  }
+  function login(dept,email,password){
+  var playersRef =firebase.database().ref("Teachers/"+dept);
+  var sn=0;
+  playersRef.once("value").then(function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+  var key = childSnapshot.key;
+  var childData = childSnapshot.val();              
+  var user = childSnapshot.val().UserName;
+  var pass=childSnapshot.val().Password;
+  if(email==user&&password==pass){
+              document.getElementById("attendance").style.display = "block";
+              document.getElementById("statistics").style.display = "none";
+              document.getElementById("login_div").style.display = "none";
+              sn=1;
+   }  
+		   });if(sn==0){
+		       alert("Wrong Credentials!!.Wait for 10 seconds and then reload the page (ctrl+r) to continue.");
+		     }
+		   });
+  }
+      function attendance()
+          {
+              document.getElementById("attendance").style.display = "block";
+              document.getElementById("statistics").style.display = "none";
+              document.getElementById("login_div").style.display = "none";
+
+          }
+      function logout()
+          {
+              document.getElementById("attendance").style.display = "none";
+              document.getElementById("statistics").style.display = "none";
+              document.getElementById("login_div").style.display = "block";
+               
+          }
+            function statistics()
+          {
+              document.getElementById("attendance").style.display = "none";
+              document.getElementById("statistics").style.display = "block";
+              document.getElementById("login_div").style.display = "none";
+               
+          }
+      document.getElementById("login_div").style.display = "block";
+      document.getElementById("attendance").style.display = "none";
+      document.getElementById("statistics").style.display = "none";
+     
+  </script>  
+          <script src="index.js"></script>
+</body>
+
+</html>

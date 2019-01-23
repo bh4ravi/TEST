@@ -1,0 +1,17 @@
+<html>
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB0AXNhbkMkUmhsToQ8PJC6KNPWgFPErAk",
+    authDomain: "placement-cell-nit-jalandhar.firebaseapp.com",
+    databaseURL: "https://placement-cell-nit-jalandhar.firebaseio.com",
+    projectId: "placement-cell-nit-jalandhar",
+    storageBucket: "placement-cell-nit-jalandhar.appspot.com",
+    messagingSenderId: "438818828039"
+  };
+  firebase.initializeApp(config);
+   var playersRef =firebase.database().ref("2016-2020/CSE");  //this is to append new child data with default key
+		console.log(playersRef.child("TotalDoffer").value);
+  </script>
+</html>
